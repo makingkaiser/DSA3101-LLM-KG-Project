@@ -1,0 +1,157 @@
+### Meeting Minutes 1
+
+**Date and Time:**
+- 10-Jan-2023, 09:00 AM to 09:30 AM
+
+**Location:**
+- Physical: IBM office, San Francisco
+- Remote: Victor Ramos (online, Zoom), New York
+
+**Attendees:**
+- Emma Lee (Product Manager, IT Department)
+- Tina Foster (IT Support Specialist, Technical Services Department)
+- Victor Ramos (RPA Developer, Automation Department, Note Taker)
+
+**Absentees:**
+- Samuel Davis (Blockchain Developer, Innovation Department)
+
+**Agenda:**
+- Quick update on the status of IBM QRadar SIEM implementation
+- Introduction of new product strategy for Google Cloud AI Platform
+
+**Discussion Points:**
+- Tina Foster provided an update on the IBM QRadar SIEM implementation for clients. Highlighted minor configuration issues that were resolved.
+- Emma Lee introduced a new product strategy for the Google Cloud AI Platform, focusing on enhanced integration with IBM services.
+
+**Next Steps:**
+1. Emma Lee to share detailed product strategy documents by 15-Jan-2023.
+2. Tina Foster to continue monitoring SIEM implementation and report any issues in the next meeting on 20-Jan-2023.
+
+---
+
+### Meeting Minutes 2
+
+**Date and Time:**
+- 18-Jan-2023, 02:00 PM to 03:00 PM
+
+**Location:**
+- Physical: IBM office, New York
+- Remote: Samuel Davis (online, Zoom), San Francisco
+
+**Attendees:**
+- Samuel Davis (Blockchain Developer, Innovation Department)
+- Emma Lee (Product Manager, IT Department, Note Taker)
+
+**Absentees:**
+- Victor Ramos (RPA Developer, Automation Department)
+
+**Agenda:**
+- Update on Hyperledger Fabric developments
+- Discussion on new blockchain application use cases
+
+**Discussion Points:**
+- Samuel Davis updated on recent developments in Hyperledger Fabric and its application within IBM Blockchain Platform.
+- Emma Lee explored potential use cases for blockchain applications in the Google Cloud AI Platform, aiming for cross-functional integration.
+
+**Next Steps:**
+1. Samuel Davis to draft a proposal for new blockchain use cases by 25-Jan-2023.
+2. Emma Lee to review the proposal and align with product strategy by 30-Jan-2023.
+
+---
+
+### Meeting Minutes 3
+
+**Date and Time:**
+- 30-Jan-2023, 11:00 AM to 12:00 PM
+
+**Location:**
+- Physical: IBM office, San Francisco
+- Remote: Tina Foster (online, Zoom), New York
+
+**Attendees:**
+- Tina Foster (IT Support Specialist, Technical Services Department)
+- Samuel Davis (Blockchain Developer, Innovation Department)
+- Victor Ramos (RPA Developer, Automation Department, Note Taker)
+
+**Absentees:**
+- Emma Lee (Product Manager, IT Department)
+
+**Agenda:**
+- Evaluation of IBM QRadar SIEM performance post-implementation
+- Review of new RPA bots developed
+
+**Discussion Points:**
+- Tina Foster provided a performance evaluation of the QRadar SIEM implementation. Identified areas needing further attention.
+- Victor Ramos reviewed new RPA bots developed for internal processes. Proposed additional automation opportunities.
+
+**Next Steps:**
+1. Tina Foster to address identified areas and report progress by 05-Feb-2023.
+2. Victor Ramos to implement new automation opportunities by 10-Feb-2023.
+
+---
+
+### Meeting Minutes 4
+
+**Date and Time:**
+- 12-Feb-2023, 01:00 PM to 02:30 PM
+
+**Location:**
+- Physical: IBM office, New York
+- Remote: Victor Ramos (online, Zoom), San Francisco
+
+**Attendees:**
+- Emma Lee (Product Manager, IT Department)
+- Victor Ramos (RPA Developer, Automation Department, Note Taker)
+- Samuel Davis (Blockchain Developer, Innovation Department)
+
+**Absentees:**
+- Tina Foster (IT Support Specialist, Technical Services Department)
+
+**Agenda:**
+- Discussion on integrating RPA bots with blockchain for enhanced security
+- Strategy planning for upcoming product release
+
+**Discussion Points:**
+- Victor Ramos suggested integrating RPA bots with blockchain to enhance transaction security.
+- Samuel Davis discussed the technical feasibility and potential challenges of the integration.
+- Emma Lee outlined the strategy for the upcoming product release, focusing on key milestones.
+
+**Next Steps:**
+1. Victor Ramos and Samuel Davis to collaborate on a prototype by 20-Feb-2023.
+2. Emma Lee to finalize the release strategy document by 25-Feb-2023.
+
+---
+
+### Meeting Minutes 5
+
+**Date and Time:**
+- 20-Feb-2023, 03:00 PM to 04:00 PM
+
+**Location:**
+- Physical: IBM office, San Francisco
+- Remote: Emma Lee (online, Zoom), New York
+
+**Attendees:**
+- Victor Ramos (RPA Developer, Automation Department, Note Taker)
+- Tina Foster (IT Support Specialist, Technical Services Department)
+- External: John Smith (Security Analyst, Zscaler)
+
+**Absentees:**
+- Samuel Davis (Blockchain Developer, Innovation Department)
+
+**Agenda:**
+- Review of security concerns with Zscaler solutions
+- Finalizing prototype integration of RPA and blockchain
+
+**Discussion Points:**
+- John Smith from Zscaler presented a review of potential security concerns and solutions for integrating RPA with blockchain.
+- Victor Ramos and Tina Foster discussed finalizing the prototype integration and addressed security recommendations.
+
+**Next Steps:**
+1. Victor Ramos to integrate Zscaler security recommendations by 28-Feb-2023.
+2. Tina Foster to conduct final tests on the prototype by 05-Mar-2023.
+3. Emma Lee to schedule a review meeting on 10-Mar-2023 for final approval.
+
+---
+
+### JSON Format for Relationships

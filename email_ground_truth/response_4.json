@@ -1,0 +1,184 @@
+{
+    "data": {
+        "entities": {
+            "persons": [
+                {
+                    "name": "Emma Lee"
+                },
+                {
+                    "name": "Henry Zhou"
+                },
+                {
+                    "name": "Lily Garcia"
+                },
+                {
+                    "name": "Zachary Brooks"
+                },
+                {
+                    "name": "Jane Doe"
+                }
+            ],
+            "organizations": [
+                {
+                    "name": "IBM"
+                },
+                {
+                    "name": "Elastic"
+                }
+            ],
+            "roles": [
+                {
+                    "title": "Product Manager"
+                },
+                {
+                    "title": "DevOps Engineer"
+                },
+                {
+                    "title": "Marketing Analyst"
+                },
+                {
+                    "title": "Solutions Engineer"
+                },
+                {
+                    "title": "Data Scientist"
+                }
+            ],
+            "locations": [
+                {
+                    "name": "San Francisco, CA"
+                },
+                {
+                    "name": "New York, NY"
+                },
+                {
+                    "name": "Austin, TX"
+                },
+                {
+                    "name": "Seattle, WA"
+                },
+                {
+                    "name": "Chicago, IL"
+                }
+            ],
+            "products_services": [
+                {
+                    "name": "Google Cloud AI Platform"
+                },
+                {
+                    "name": "IBM Kubernetes Service"
+                },
+                {
+                    "name": "IBM Cloud Satellite"
+                },
+                {
+                    "name": "IBM Cloud Pak for Integration"
+                },
+                {
+                    "name": "Elastic's Analytics Engine"
+                }
+            ]
+        },
+        "relationships": [
+            {
+                "type": "AFFILIATED_WITH",
+                "person": "Emma Lee",
+                "organization": "IBM"
+            },
+            {
+                "type": "HAS_ROLE",
+                "person": "Emma Lee",
+                "role": "Product Manager"
+            },
+            {
+                "type": "INVOLVED_WITH",
+                "person": "Emma Lee",
+                "product_service": "Google Cloud AI Platform"
+            },
+            {
+                "type": "AFFILIATED_WITH",
+                "person": "Henry Zhou",
+                "organization": "IBM"
+            },
+            {
+                "type": "HAS_ROLE",
+                "person": "Henry Zhou",
+                "role": "DevOps Engineer"
+            },
+            {
+                "type": "INVOLVED_WITH",
+                "person": "Henry Zhou",
+                "product_service": "IBM Kubernetes Service"
+            },
+            {
+                "type": "AFFILIATED_WITH",
+                "person": "Lily Garcia",
+                "organization": "IBM"
+            },
+            {
+                "type": "HAS_ROLE",
+                "person": "Lily Garcia",
+                "role": "Marketing Analyst"
+            },
+            {
+                "type": "INVOLVED_WITH",
+                "person": "Lily Garcia",
+                "product_service": "IBM Cloud Satellite"
+            },
+            {
+                "type": "AFFILIATED_WITH",
+                "person": "Zachary Brooks",
+                "organization": "IBM"
+            },
+            {
+                "type": "HAS_ROLE",
+                "person": "Zachary Brooks",
+                "role": "Solutions Engineer"
+            },
+            {
+                "type": "INVOLVED_WITH",
+                "person": "Zachary Brooks",
+                "product_service": "IBM Cloud Pak for Integration"
+            },
+            {
+                "type": "AFFILIATED_WITH",
+                "person": "Jane Doe",
+                "organization": "Elastic"
+            },
+            {
+                "type": "HAS_ROLE",
+                "person": "Jane Doe",
+                "role": "Data Scientist"
+            },
+            {
+                "type": "INVOLVED_WITH",
+                "person": "Jane Doe",
+                "product_service": "Elastic's Analytics Engine"
+            },
+            {
+                "type": "LOCATED_AT",
+                "organization": "IBM",
+                "location": "San Francisco, CA"
+            },
+            {
+                "type": "LOCATED_AT",
+                "organization": "IBM",
+                "location": "New York, NY"
+            },
+            {
+                "type": "LOCATED_AT",
+                "organization": "IBM",
+                "location": "Austin, TX"
+            },
+            {
+                "type": "LOCATED_AT",
+                "organization": "IBM",
+                "location": "Seattle, WA"
+            },
+            {
+                "type": "LOCATED_AT",
+                "organization": "IBM",
+                "location": "Chicago, IL"
+            }
+        ]
+    }
+}

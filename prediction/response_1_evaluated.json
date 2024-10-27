@@ -1,0 +1,139 @@
+{
+    "entities": {
+      "persons": [
+        {
+          "name": "Henry Zhou"
+        },
+        {
+          "name": "Alice Smith"
+        },
+        {
+          "name": "Lily Garcia"
+        },
+        {
+          "name": "Natalie Wu"
+        },
+        {
+          "name": "Samuel Davis"
+        }
+      ],
+      "organizations": [
+        {
+          "name": "IBM"
+        }
+      ],
+      "roles": [
+        {
+          "title": "DevOps Engineer"
+        },
+        {
+          "title": "Chief Data Officer"
+        },
+        {
+          "title": "Marketing Analyst"
+        },
+        {
+          "title": "Product Marketing Manager"
+        },
+        {
+          "title": "Blockchain Developer"
+        }
+      ],
+      "locations": [],
+      "products_services": [
+        {
+          "name": "IBM Kubernetes Service"
+        },
+        {
+          "name": "Jenkins"
+        },
+        {
+          "name": "IBM Cloud Satellite"
+        },
+        {
+          "name": "Symantec Endpoint Security"
+        },
+        {
+          "name": "IBM Watson Discovery"
+        },
+        {
+          "name": "Hyperledger Fabric"
+        },
+        {
+          "name": "IBM Blockchain Platform"
+        }
+      ]
+    },
+    "relationships": [
+      {
+        "type": "AFFILIATED_WITH",
+        "person": "Henry Zhou",
+        "organization": "IBM"
+      },
+      {
+        "type": "AFFILIATED_WITH",
+        "person": "Alice Smith",
+        "organization": "IBM"
+      },
+      {
+        "type": "AFFILIATED_WITH",
+        "person": "Lily Garcia",
+        "organization": "IBM"
+      },
+      {
+        "type": "AFFILIATED_WITH",
+        "person": "Natalie Wu",
+        "organization": "IBM"
+      },
+      {
+        "type": "AFFILIATED_WITH",
+        "person": "Samuel Davis",
+        "organization": "IBM"
+      },
+      {
+        "type": "HAS_ROLE",
+        "person": "Henry Zhou",
+        "role": "DevOps Engineer, Operations Department"
+      },
+      {
+        "type": "HAS_ROLE",
+        "person": "Alice Smith",
+        "role": "Chief Data Officer, R&D Department"
+      },
+      {
+        "type": "HAS_ROLE",
+        "person": "Lily Garcia",
+        "role": "Marketing Analyst, Business Strategy Department"
+      },
+      {
+        "type": "HAS_ROLE",
+        "person": "Natalie Wu",
+        "role": "Product Marketing Manager, Marketing Department"
+      },
+      {
+        "type": "HAS_ROLE",
+        "person": "Samuel Davis",
+        "role": "Blockchain Developer, Innovation Department"
+      },
+      {
+        "type": "INVOLVED_WITH",
+        "person": "Henry Zhou",
+        "product_service": "IBM Kubernetes Service"
+      },
+      {
+        "type": "INVOLVED_WITH",
+        "person": "Henry Zhou",
+        "product_service": "Jenkins"
+      },
+      {
+        "type": "INVOLVED_WITH",
+        "person": "Alice Smith",
+        "product_service": "Symantec Endpoint Security"
+      },
+      {
+        "type": "LOCATED_AT",
+        "organization": "IBM",
+        "location": ""
+      }
+    ]
+  }

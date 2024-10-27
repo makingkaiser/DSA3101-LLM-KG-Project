@@ -1,0 +1,165 @@
+### Meeting Minutes
+
+#### 1. Simple
+
+**Date and Time:** 01-Feb-2023, 10:00 AM - 10:30 AM PST  
+**Location:**  
+- Physical: San Francisco, CA (IBM Office)  
+- Remote: New York, NY (Microsoft Teams)  
+
+**Attendees:**  
+- Emma Lee - Product Manager, IT Department  
+- Henry Zhou - DevOps Engineer, Operations Department  
+- Lily Garcia - Marketing Analyst, Business Strategy Department (Note Taker)  
+
+**Absentees:**  
+- Zachary Brooks - Solutions Engineer, Customer Success Department  
+
+**Agenda:**  
+1. Project Update: Google Cloud AI Platform  
+2. Marketing Insights on IBM Cloud Satellite  
+3. Automation of CI/CD Pipelines  
+
+**Discussion Points:**  
+- Emma provided a brief update on the latest features being developed for Google Cloud AI Platform.  
+- Lily shared recent customer trend data for IBM Cloud Satellite, indicating a positive growth in the use of hybrid cloud solutions.  
+- Henry mentioned the progress made in automating CI/CD pipelines for IBM Kubernetes Service.  
+
+**Next Steps:**  
+- Emma to finalize feature specifications for the next release by 15-Feb-2023.  
+- Lily to prepare a detailed marketing strategy report by 10-Feb-2023.  
+- Henry to complete the pipeline automation for the new features by 20-Feb-2023.  
+
+---
+
+#### 2. Moderate
+
+**Date and Time:** 14-Feb-2023, 1:00 PM - 2:00 PM PST  
+**Location:**  
+- Physical: Austin, TX (IBM Office)  
+- Remote: San Francisco, CA (Microsoft Teams)  
+
+**Attendees:**  
+- Emma Lee - Product Manager, IT Department  
+- Zachary Brooks - Solutions Engineer, Customer Success Department  
+- Henry Zhou - DevOps Engineer, Operations Department  
+
+**Absentees:**  
+- Lily Garcia - Marketing Analyst, Business Strategy Department  
+
+**Agenda:**  
+1. Implementation of IBM Cloud Pak for Integration  
+2. Product Strategy for Google Cloud AI Platform  
+
+**Discussion Points:**  
+- Zachary detailed the integration challenges faced during the implementation of IBM Cloud Pak for Integration, suggesting a collaborative approach to resolve them.  
+- Emma discussed the upcoming milestones for Google Cloud AI Platform, emphasizing the need for robust testing.  
+- Henry highlighted the need to streamline the CI/CD pipelines to accommodate frequent releases.  
+
+**Next Steps:**  
+- Zachary to coordinate with the Customer Success team for integration resolution by 25-Feb-2023.  
+- Emma to schedule a testing phase meeting by 18-Feb-2023.  
+- Henry to optimize the CI/CD pipeline configuration by 22-Feb-2023.  
+
+---
+
+#### 3. Detailed
+
+**Date and Time:** 28-Feb-2023, 9:00 AM - 11:00 AM PST  
+**Location:**  
+- Physical: San Francisco, CA (IBM Office)  
+- Remote: Seattle, WA (Microsoft Teams)  
+
+**Attendees:**  
+- Emma Lee - Product Manager, IT Department  
+- Henry Zhou - DevOps Engineer, Operations Department  
+- Lily Garcia - Marketing Analyst, Business Strategy Department  
+- Zachary Brooks - Solutions Engineer, Customer Success Department  
+- Guest: Jane Doe - Data Scientist, Elastic  
+
+**Absentees:**  
+- None  
+
+**Agenda:**  
+1. Customer Insights on IBM Cloud Satellite  
+2. Integrating Elastic’s Analytics Engine  
+3. Product Roadmap for Google Cloud AI Platform  
+
+**Discussion Points:**  
+- Lily presented in-depth customer insights, highlighting the growing preference for IBM Cloud Satellite.  
+- Jane Doe from Elastic introduced their analytics engine, explaining how it could be integrated for real-time data insights.  
+- Emma walked through the product roadmap for Google Cloud AI Platform, focusing on key deliverables for Q2 2023.  
+- Zachary discussed potential customer feedback loops to improve IBM Cloud Pak for Integration.  
+- Henry suggested employing Elastic’s engine to enhance CI/CD pipeline analytics.  
+
+**Next Steps:**  
+- Emma to incorporate Elastic’s engine into the product strategy by 15-Mar-2023.  
+- Zachary to create a feedback mechanism for customer interactions by 10-Mar-2023.  
+- Henry and Jane to collaborate on pipeline analytics integration by 20-Mar-2023.  
+- Lily to conduct a market analysis to assess competitor strategies by 05-Mar-2023.  
+
+---
+
+#### 4. Simple
+
+**Date and Time:** 10-Mar-2023, 11:00 AM - 11:30 AM PST  
+**Location:**  
+- Physical: San Francisco, CA (IBM Office)  
+- Remote: Austin, TX (Microsoft Teams)  
+
+**Attendees:**  
+- Emma Lee - Product Manager, IT Department  
+- Henry Zhou - DevOps Engineer, Operations Department (Note Taker)  
+- Lily Garcia - Marketing Analyst, Business Strategy Department  
+
+**Absentees:**  
+- Zachary Brooks - Solutions Engineer, Customer Success Department  
+
+**Agenda:**  
+1. Progress on CI/CD Pipeline Automation  
+2. Marketing Campaign for IBM Cloud Satellite  
+
+**Discussion Points:**  
+- Henry confirmed the completion of automated CI/CD pipelines, expressing readiness for the next release cycle.  
+- Lily provided an outline for the upcoming marketing campaign, targeting mid-sized enterprises.  
+- Emma suggested collaborating with the design team to create compelling visuals for the campaign.  
+
+**Next Steps:**  
+- Henry to monitor the pipeline performance during the first deployment by 15-Mar-2023.  
+- Lily to finalize the marketing campaign details by 20-Mar-2023.  
+- Emma to schedule a design team meeting for campaign visuals by 12-Mar-2023.  
+
+---
+
+#### 5. Moderate
+
+**Date and Time:** 20-Mar-2023, 2:00 PM - 3:00 PM PST  
+**Location:**  
+- Physical: San Francisco, CA (IBM Office)  
+- Remote: Chicago, IL (Microsoft Teams)  
+
+**Attendees:**  
+- Emma Lee - Product Manager, IT Department  
+- Lily Garcia - Marketing Analyst, Business Strategy Department  
+- Zachary Brooks - Solutions Engineer, Customer Success Department  
+
+**Absentees:**  
+- Henry Zhou - DevOps Engineer, Operations Department  
+
+**Agenda:**  
+1. Feedback on IBM Cloud Pak for Integration  
+2. Review of Google Cloud AI Platform Strategy  
+
+**Discussion Points:**  
+- Zachary shared customer feedback, suggesting several improvements for IBM Cloud Pak for Integration.  
+- Emma reviewed the strategy for Google Cloud AI Platform, addressing key customer requirements and future enhancements.  
+- Lily emphasized the need for a stronger social media presence to engage with potential customers.  
+
+**Next Steps:**  
+- Zachary to summarize the feedback and propose actionable improvements by 25-Mar-2023.  
+- Emma to revise the product strategy document and circulate it by 28-Mar-2023.  
+- Lily to develop a social media engagement plan by 22-Mar-2023.  
+
+---
+
+### JSON Data

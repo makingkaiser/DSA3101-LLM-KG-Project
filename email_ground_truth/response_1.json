@@ -1,0 +1,189 @@
+{
+    "data": {
+        "entities": {
+            "persons": [
+                {
+                    "name": "Benji Martinez"
+                },
+                {
+                    "name": "Emma Lee"
+                },
+                {
+                    "name": "Zachary Brooks"
+                },
+                {
+                    "name": "Victor Ramos"
+                },
+                {
+                    "name": "John Smith"
+                },
+                {
+                    "name": "Jane Doe"
+                }
+            ],
+            "organizations": [
+                {
+                    "name": "IBM"
+                },
+                {
+                    "name": "ServiceTitan"
+                }
+            ],
+            "roles": [
+                {
+                    "title": "IT Operations Manager"
+                },
+                {
+                    "title": "Product Manager"
+                },
+                {
+                    "title": "Solutions Engineer"
+                },
+                {
+                    "title": "RPA Developer"
+                },
+                {
+                    "title": "Integration Specialist"
+                },
+                {
+                    "title": "AI Research Scientist"
+                }
+            ],
+            "locations": [
+                {
+                    "name": "New York"
+                },
+                {
+                    "name": "San Francisco"
+                },
+                {
+                    "name": "Austin"
+                },
+                {
+                    "name": "Boston"
+                }
+            ],
+            "products_services": [
+                {
+                    "name": "IBM Cloud Object Storage"
+                },
+                {
+                    "name": "Google Cloud AI Platform"
+                },
+                {
+                    "name": "IBM Cloud Pak for Integration"
+                },
+                {
+                    "name": "IBM Robotic Process Automation"
+                }
+            ]
+        },
+        "relationships": [
+            {
+                "type": "AFFILIATED_WITH",
+                "person": "Benji Martinez",
+                "organization": "IBM"
+            },
+            {
+                "type": "HAS_ROLE",
+                "person": "Benji Martinez",
+                "role": "IT Operations Manager"
+            },
+            {
+                "type": "INVOLVED_WITH",
+                "person": "Benji Martinez",
+                "product_service": "IBM Cloud Object Storage"
+            },
+            {
+                "type": "AFFILIATED_WITH",
+                "person": "Emma Lee",
+                "organization": "IBM"
+            },
+            {
+                "type": "HAS_ROLE",
+                "person": "Emma Lee",
+                "role": "Product Manager"
+            },
+            {
+                "type": "INVOLVED_WITH",
+                "person": "Emma Lee",
+                "product_service": "Google Cloud AI Platform"
+            },
+            {
+                "type": "AFFILIATED_WITH",
+                "person": "Zachary Brooks",
+                "organization": "IBM"
+            },
+            {
+                "type": "HAS_ROLE",
+                "person": "Zachary Brooks",
+                "role": "Solutions Engineer"
+            },
+            {
+                "type": "INVOLVED_WITH",
+                "person": "Zachary Brooks",
+                "product_service": "IBM Cloud Pak for Integration"
+            },
+            {
+                "type": "AFFILIATED_WITH",
+                "person": "Victor Ramos",
+                "organization": "IBM"
+            },
+            {
+                "type": "HAS_ROLE",
+                "person": "Victor Ramos",
+                "role": "RPA Developer"
+            },
+            {
+                "type": "INVOLVED_WITH",
+                "person": "Victor Ramos",
+                "product_service": "IBM Robotic Process Automation"
+            },
+            {
+                "type": "AFFILIATED_WITH",
+                "person": "John Smith",
+                "organization": "ServiceTitan"
+            },
+            {
+                "type": "HAS_ROLE",
+                "person": "John Smith",
+                "role": "Integration Specialist"
+            },
+            {
+                "type": "AFFILIATED_WITH",
+                "person": "Jane Doe",
+                "organization": "IBM"
+            },
+            {
+                "type": "HAS_ROLE",
+                "person": "Jane Doe",
+                "role": "AI Research Scientist"
+            },
+            {
+                "type": "LOCATED_AT",
+                "organization": "IBM",
+                "location": "New York"
+            },
+            {
+                "type": "LOCATED_AT",
+                "organization": "IBM",
+                "location": "San Francisco"
+            },
+            {
+                "type": "LOCATED_AT",
+                "organization": "IBM",
+                "location": "Austin"
+            },
+            {
+                "type": "LOCATED_AT",
+                "organization": "IBM",
+                "location": "Boston"
+            },
+            {
+                "type": "LOCATED_AT",
+                "organization": "ServiceTitan",
+                "location": "Boston"
+            }
+        ]
+    }
+}

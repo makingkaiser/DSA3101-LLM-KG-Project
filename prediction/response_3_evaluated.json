@@ -1,0 +1,130 @@
+{
+    "data": {
+        "entities": {
+            "persons": [
+                {
+                    "name": "Natalie Wu"
+                },
+                {
+                    "name": "Alice Smith"
+                },
+                {
+                    "name": "Victor Ramos"
+                },
+                {
+                    "name": "Lily Garcia"
+                },
+                {
+                    "name": "Benji Martinez"
+                }
+            ],
+            "organizations": [
+                {
+                    "name": "IBM"
+                }
+            ],
+            "roles": [
+                {
+                    "title": "Product Marketing Manager"
+                },
+                {
+                    "title": "Chief Data Officer"
+                },
+                {
+                    "title": "Robotics Process Automation Developer"
+                },
+                {
+                    "title": "IT Operations Manager"
+                },
+                {
+                    "title": "Marketing Analyst"
+                }
+            ],
+            "locations": [
+                {
+                    "name": "New York"
+                }
+            ],
+            "products_services": [
+                {
+                    "name": "IBM Watson Discovery"
+                },
+                {
+                    "name": "RPA"
+                }
+            ]
+        },
+        "relationships": [
+            {
+                "type": "AFFILIATED_WITH",
+                "person": "Natalie Wu",
+                "organization": "IBM"
+            },
+            {
+                "type": "HAS_ROLE",
+                "person": "Alice Smith",
+                "role": "Chief Data Officer"
+            },
+            {
+                "type": "AFFILIATED_WITH",
+                "person": "Victor Ramos",
+                "organization": "IBM"
+            },
+            {
+                "type": "HAS_ROLE",
+                "person": "Victor Ramos",
+                "role": "Robotics Process Automation Developer"
+            },
+            {
+                "type": "AFFILIATED_WITH",
+                "person": "Benji Martinez",
+                "organization": "IBM"
+            },
+            {
+                "type": "HAS_ROLE",
+                "person": "Benji Martinez",
+                "role": "IT Operations Manager"
+            },
+            {
+                "type": "AFFILIATED_WITH",
+                "person": "Lily Garcia",
+                "organization": "IBM"
+            },
+            {
+                "type": "HAS_ROLE",
+                "person": "Lily Garcia",
+                "role": "Marketing Analyst"
+            },
+            {
+                "type": "LOCATED_AT",
+                "organization": "IBM",
+                "location": "New York"
+            },
+            {
+                "type": "INVOLVED_WITH",
+                "person": "Natalie Wu",
+                "product_service": "RPA"
+            },
+            {
+                "type": "INVOLVED_WITH",
+                "person": "Alice Smith",
+                "product_service": "IBM Watson Discovery"
+            },
+            {
+                "type": "INVOLVED_WITH",
+                "person": "Victor Ramos",
+                "product_service": "RPA"
+            },
+            {
+                "type": "INVOLVED_WITH",
+                "person": "Benji Martinez",
+                "product_service": "IBM Cloud Object Storage"
+            },
+            {
+                "type": "INVOLVED_WITH",
+                "person": "Lily Garcia",
+                "product_service": "IBM Watson Discovery"
+            }
+        ]
+    }
+}

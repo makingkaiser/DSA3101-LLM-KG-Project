@@ -54,7 +54,10 @@ async def create_openai_completion(prompt):
             {"role": "user", "content": prompt}
         ],
         max_tokens=4096,
-        temperature=0.7,
+        temperature=0.9,
         top_p=0.95,
     )
     return response
+
+
+
