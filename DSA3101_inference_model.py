@@ -2,16 +2,19 @@ import os
 import json
 import re
 from openai import OpenAI
+import huggingface_hub
+from huggingface_hub import InferenceClient
 
 
 # Point to the local server
-client = OpenAI(base_url="http://localhost:1234/v1", api_key="lm-studio")
+#client = OpenAI(base_url="http://localhost:1234/v1", api_key="lm-studio")
+
 
 eval_prompt = """Your task is to extract entities, as well as define any relationships between them, outputting only a single JSON object for which the format MUST be adhered to, with no other text. The entity types to extract are:
 
 Person/Organization
 Role
-Location
+Location (Try not to make too many assumptions)
 Product/Service
 
 The head-tail relationships (if present) to be extracted are:
@@ -82,6 +85,7 @@ JSON Format with dummy examples:
   }}  
 }}  
 
+Do not include comments within the JSON.
 
 TEXT:
 {text}
@@ -91,7 +95,16 @@ TEXT:
 def extract_json_from_response(response_text):
     """
     Extracts JSON from response text, handling code blocks and multiline content.
+    Removes comments before parsing.
     """
+    def remove_comments(json_str):
+        # Remove single-line comments
+        json_str = re.sub(r'#.*$', '', json_str, flags=re.MULTILINE)
+        json_str = re.sub(r'//.*$', '', json_str, flags=re.MULTILINE)
+        # Remove multi-line comments
+        json_str = re.sub(r'/\*.*?\*/', '', json_str, flags=re.DOTALL)
+        return json_str
+
     # First try to find JSON within code blocks
     code_block_pattern = r'```json\s*([\s\S]*?)\s*```'
     code_block_match = re.search(code_block_pattern, response_text)
@@ -99,24 +112,27 @@ def extract_json_from_response(response_text):
     if code_block_match:
         try:
             json_str = code_block_match.group(1)
+            json_str = remove_comments(json_str)
             json_object = json.loads(json_str)
             return json_object
         except json.JSONDecodeError:
             pass
-    
+
     # If no code block or invalid JSON, try general JSON pattern
-    json_pattern = r'(?s)\{.*?\}(?=\s*$)'  # (?s) enables dot to match newlines
+    json_pattern = r'(?s)\{.*?\}(?=\s*$)'
     json_match = re.search(json_pattern, response_text)
     
     if json_match:
         json_str = json_match.group(0)
-        json_object = json.loads(json_str)
-        return json_object
-    
+        json_str = remove_comments(json_str)
+        try:
+            json_object = json.loads(json_str)
+            return json_object
+        except json.JSONDecodeError:
+            pass
+
     # Return None if no valid JSON is found
     return None
-
-
 
 
 def eval_text_files(input_folder, output_folder):
@@ -160,12 +176,17 @@ def eval_text_files(input_folder, output_folder):
         )
         print(f"evaluating {txt_file}...")
         completion = client.chat.completions.create(
-        model="lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF/Meta-Llama-3.1-8B-Instruct-Q6_K.gguf",
-        messages=[
-            {"role": "user", "content": populated_prompt},
-        ],
-        )
+            model="meta-llama/Llama-3.1-8B-Instruct", 
+            messages=[ 
+                {"role": "user", "content": populated_prompt}],
+   
+            temperature=0.8,
+            max_tokens=4096,
+            top_p=0.7,
+            stream=False
+            )
         response_text = completion.choices[0].message.content
+        print(response_text)
         
         extracted_json = extract_json_from_response(response_text)
         base_name, _ = os.path.splitext(txt_file)
@@ -179,9 +200,22 @@ def eval_text_files(input_folder, output_folder):
         print(f"Evaluated '{txt_file}' and saved to '{evaluated_filename}'.")
 
 
-eval_text_files("gt", "prediction")
+eval_text_files("email_ground_truth", "email_ground_truth_prediction")
 
 # string = """{\n  \"entities\": {\n    \"persons\": [\n      {\n        \"name\": \"Tina Foster\"\n      },\n      {\n        \"name\": \"Quinn Parker\"\n      },\n      {\n        \"name\": \"Carol Nguyen\"\n      },\n      {\n        \"name\": \"Derek Hill\"\n      },\n      {\n        \"name\": \"Natalie Wu\"\n      }\n    ],\n    \"organizations\": [\n      {\n        \"name\": \"IBM\"\n      }\n    ],\n    \"roles\": [\n      {\n        \"title\": \"IT Support Specialist\"\n      },\n      {\n        \"title\": \"Data Analyst\"\n      },\n      {\n        \"title\": \"Junior Data Scientist\"\n      },\n      {\n        \"title\": \"QA Engineer\"\n      },\n      {\n        \"title\": \"Product Marketing Manager\"\n      }\n    ],\n    \"locations\": [\n      \n    ],\n    \"products_services\": [\n      {\n        \"name\": \"QRadar SIEM\"\n      },\n      {\n        \"name\": \"IBM Cognos Analytics\"\n      },\n      {\n        \"name\": \"Microsoft Azure\"\n      },\n      {\n        \"name\": \"Splunk\"\n      }\n    ]\n  },\n  \"relationships\": [\n    {\n      \"type\": \"AFFILIATED_WITH\",\n      \"person\": \"Tina Foster\",\n      \"organization\": \"IBM\"\n    },\n    {\n      \"type\": \"HAS_ROLE\",\n      \"person\": \"Tina Foster\",\n      \"role\": \"IT Support Specialist\"\n    },\n    {\n      \"type\": \"INVOLVED_WITH\",\n      \"person\": \"Quinn Parker\",\n      \"product_service\": \"QRadar SIEM\"\n    },\n    {\n      \"type\": \"LOCATED_AT\",\n      \"organization\": \"IBM\",\n      \"location\": \"\"\n    },\n    {\n      \"type\": \"HAS_ROLE\",\n      \"person\": \"Quinn Parker\",\n      \"role\": \"Data Analyst\"\n    },\n    {\n      \"type\": \"AFFILIATED_WITH\",\n      \"person\": \"Carol Nguyen\",\n      \"organization\": \"IBM\"\n    },\n    {\n      \"type\": \"HAS_ROLE\",\n      \"person\": \"Carol Nguyen\",\n      \"role\": \"Junior Data Scientist\"\n    },\n    {\n      \"type\": \"INVOLVED_WITH\",\n      \"person\": \"Carol Nguyen\",\n      \"product_service\": \"Microsoft Azure\"\n    },\n    {\n      \"type\": \"AFFILIATED_WITH\",\n      \"person\": \"Derek Hill\",\n      \"organization\": \"IBM\"\n    },\n    {\n      \"type\": \"HAS_ROLE\",\n      \"person\": \"Derek Hill\",\n      \"role\": \"QA Engineer\"\n    },\n    {\n      \"type\": \"INVOLVED_WITH\",\n      \"person\": \"Natalie Wu\",\n      \"product_service\": \"Splunk\"\n    }\n  ]\n}"""
 # print(extract_json_from_response(string))
 
 #
+# completion = client.chat.completions.create(
+#             model="meta-llama/Llama-3.1-8B-Instruct", 
+#             messages=[ 
+#                 {"role": "user", "content": 'hello'}],
+   
+#             temperature=0.8,
+#             max_tokens=4096,
+#             top_p=0.7,
+#             stream=False
+#             )
+# response_text = completion.choices[0].message.content
+
+# print(response_text)

@@ -1,184 +1,129 @@
 {
-    "data": {
-        "entities": {
-            "persons": [
-                {
-                    "name": "Emma Lee"
-                },
-                {
-                    "name": "Henry Zhou"
-                },
-                {
-                    "name": "Lily Garcia"
-                },
-                {
-                    "name": "Zachary Brooks"
-                },
-                {
-                    "name": "Jane Doe"
-                }
-            ],
-            "organizations": [
-                {
-                    "name": "IBM"
-                },
-                {
-                    "name": "Elastic"
-                }
-            ],
-            "roles": [
-                {
-                    "title": "Product Manager"
-                },
-                {
-                    "title": "DevOps Engineer"
-                },
-                {
-                    "title": "Marketing Analyst"
-                },
-                {
-                    "title": "Solutions Engineer"
-                },
-                {
-                    "title": "Data Scientist"
-                }
-            ],
-            "locations": [
-                {
-                    "name": "San Francisco, CA"
-                },
-                {
-                    "name": "New York, NY"
-                },
-                {
-                    "name": "Austin, TX"
-                },
-                {
-                    "name": "Seattle, WA"
-                },
-                {
-                    "name": "Chicago, IL"
-                }
-            ],
-            "products_services": [
-                {
-                    "name": "Google Cloud AI Platform"
-                },
-                {
-                    "name": "IBM Kubernetes Service"
-                },
-                {
-                    "name": "IBM Cloud Satellite"
-                },
-                {
-                    "name": "IBM Cloud Pak for Integration"
-                },
-                {
-                    "name": "Elastic's Analytics Engine"
-                }
-            ]
-        },
-        "relationships": [
+    "entities": {
+        "persons": [
             {
-                "type": "AFFILIATED_WITH",
-                "person": "Emma Lee",
-                "organization": "IBM"
+                "name": "Tina Foster"
             },
             {
-                "type": "HAS_ROLE",
-                "person": "Emma Lee",
-                "role": "Product Manager"
+                "name": "Quinn Parker"
             },
             {
-                "type": "INVOLVED_WITH",
-                "person": "Emma Lee",
-                "product_service": "Google Cloud AI Platform"
+                "name": "Carol Nguyen"
             },
             {
-                "type": "AFFILIATED_WITH",
-                "person": "Henry Zhou",
-                "organization": "IBM"
+                "name": "Derek Hill"
             },
             {
-                "type": "HAS_ROLE",
-                "person": "Henry Zhou",
-                "role": "DevOps Engineer"
+                "name": "Natalie Wu"
+            }
+        ],
+        "organizations": [
+            {
+                "name": "IBM"
             },
             {
-                "type": "INVOLVED_WITH",
-                "person": "Henry Zhou",
-                "product_service": "IBM Kubernetes Service"
+                "name": "Splunk"
+            }
+        ],
+        "roles": [
+            {
+                "title": "IT Support Specialist"
             },
             {
-                "type": "AFFILIATED_WITH",
-                "person": "Lily Garcia",
-                "organization": "IBM"
+                "title": "Data Analyst"
             },
             {
-                "type": "HAS_ROLE",
-                "person": "Lily Garcia",
-                "role": "Marketing Analyst"
+                "title": "Junior Data Scientist"
             },
             {
-                "type": "INVOLVED_WITH",
-                "person": "Lily Garcia",
-                "product_service": "IBM Cloud Satellite"
+                "title": "QA Engineer"
             },
             {
-                "type": "AFFILIATED_WITH",
-                "person": "Zachary Brooks",
-                "organization": "IBM"
+                "title": "Product Marketing Manager"
+            }
+        ],
+        "products_services": [
+            {
+                "name": "IBM QRadar SIEM"
             },
             {
-                "type": "HAS_ROLE",
-                "person": "Zachary Brooks",
-                "role": "Solutions Engineer"
+                "name": "IBM Cognos Analytics"
             },
             {
-                "type": "INVOLVED_WITH",
-                "person": "Zachary Brooks",
-                "product_service": "IBM Cloud Pak for Integration"
-            },
-            {
-                "type": "AFFILIATED_WITH",
-                "person": "Jane Doe",
-                "organization": "Elastic"
-            },
-            {
-                "type": "HAS_ROLE",
-                "person": "Jane Doe",
-                "role": "Data Scientist"
-            },
-            {
-                "type": "INVOLVED_WITH",
-                "person": "Jane Doe",
-                "product_service": "Elastic's Analytics Engine"
-            },
-            {
-                "type": "LOCATED_AT",
-                "organization": "IBM",
-                "location": "San Francisco, CA"
-            },
-            {
-                "type": "LOCATED_AT",
-                "organization": "IBM",
-                "location": "New York, NY"
-            },
-            {
-                "type": "LOCATED_AT",
-                "organization": "IBM",
-                "location": "Austin, TX"
-            },
-            {
-                "type": "LOCATED_AT",
-                "organization": "IBM",
-                "location": "Seattle, WA"
-            },
-            {
-                "type": "LOCATED_AT",
-                "organization": "IBM",
-                "location": "Chicago, IL"
+                "name": "Microsoft Azure"
             }
         ]
-    }
+    },
+    "relationships": [
+        {
+            "type": "AFFILIATED_WITH",
+            "person": "Tina Foster",
+            "organization": "IBM"
+        },
+        {
+            "type": "HAS_ROLE",
+            "person": "Tina Foster",
+            "role": "IT Support Specialist"
+        },
+        {
+            "type": "INVOLVED_WITH",
+            "person": "Tina Foster",
+            "product_service": "IBM QRadar SIEM"
+        },
+        {
+            "type": "AFFILIATED_WITH",
+            "person": "Quinn Parker",
+            "organization": "IBM"
+        },
+        {
+            "type": "HAS_ROLE",
+            "person": "Quinn Parker",
+            "role": "Data Analyst"
+        },
+        {
+            "type": "INVOLVED_WITH",
+            "person": "Quinn Parker",
+            "product_service": "IBM Cognos Analytics"
+        },
+        {
+            "type": "AFFILIATED_WITH",
+            "person": "Carol Nguyen",
+            "organization": "IBM"
+        },
+        {
+            "type": "HAS_ROLE",
+            "person": "Carol Nguyen",
+            "role": "Junior Data Scientist"
+        },
+        {
+            "type": "INVOLVED_WITH",
+            "person": "Carol Nguyen",
+            "product_service": "Microsoft Azure"
+        },
+        {
+            "type": "AFFILIATED_WITH",
+            "person": "Derek Hill",
+            "organization": "IBM"
+        },
+        {
+            "type": "HAS_ROLE",
+            "person": "Derek Hill",
+            "role": "QA Engineer"
+        },
+        {
+            "type": "AFFILIATED_WITH",
+            "person": "Natalie Wu",
+            "organization": "IBM"
+        },
+        {
+            "type": "HAS_ROLE",
+            "person": "Natalie Wu",
+            "role": "Product Marketing Manager"
+        },
+        {
+            "type": "AFFILIATED_WITH",
+            "organization": "Splunk",
+            "person": "Natalie Wu"
+        }
+    ]
 }

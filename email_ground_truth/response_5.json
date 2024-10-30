@@ -1,221 +1,117 @@
 {
-    "data": {
-        "entities": {
-            "persons": [
-                {
-                    "name": "Brian Taylor"
-                },
-                {
-                    "name": "Carol Nguyen"
-                },
-                {
-                    "name": "Samuel Davis"
-                },
-                {
-                    "name": "Victor Ramos"
-                },
-                {
-                    "name": "James Smith"
-                },
-                {
-                    "name": "Emily Johnson"
-                },
-                {
-                    "name": "Nancy Brown"
-                },
-                {
-                    "name": "Sarah Lee"
-                }
-            ],
-            "organizations": [
-                {
-                    "name": "IBM"
-                },
-                {
-                    "name": "C3.ai"
-                }
-            ],
-            "roles": [
-                {
-                    "title": "Senior Data Scientist"
-                },
-                {
-                    "title": "Junior Data Scientist"
-                },
-                {
-                    "title": "Blockchain Developer"
-                },
-                {
-                    "title": "RPA Developer"
-                },
-                {
-                    "title": "Senior AI Consultant"
-                },
-                {
-                    "title": "Project Manager"
-                },
-                {
-                    "title": "Data Analyst"
-                },
-                {
-                    "title": "AI Expert"
-                }
-            ],
-            "locations": [
-                {
-                    "name": "New York"
-                },
-                {
-                    "name": "San Francisco"
-                },
-                {
-                    "name": "London"
-                },
-                {
-                    "name": "Toronto"
-                }
-            ],
-            "products_services": [
-                {
-                    "name": "Microsoft Azure"
-                },
-                {
-                    "name": "Hyperledger Fabric"
-                },
-                {
-                    "name": "IBM Blockchain Platform"
-                },
-                {
-                    "name": "IBM Robotic Process Automation"
-                }
-            ]
-        },
-        "relationships": [
+    "entities": {
+        "persons": [
             {
-                "type": "AFFILIATED_WITH",
-                "person": "Brian Taylor",
-                "organization": "IBM"
+                "name": "Alice Smith"
             },
             {
-                "type": "AFFILIATED_WITH",
-                "person": "Carol Nguyen",
-                "organization": "IBM"
+                "name": "Michael Turner"
             },
             {
-                "type": "AFFILIATED_WITH",
-                "person": "Samuel Davis",
-                "organization": "IBM"
+                "name": "Rachel Singh"
             },
             {
-                "type": "AFFILIATED_WITH",
-                "person": "Victor Ramos",
-                "organization": "IBM"
+                "name": "Samuel Davis"
+            }
+        ],
+        "organizations": [
+            {
+                "name": "IBM"
             },
             {
-                "type": "AFFILIATED_WITH",
-                "person": "James Smith",
-                "organization": "C3.ai"
+                "name": "Symantec"
+            }
+        ],
+        "roles": [
+            {
+                "title": "Chief Data Officer"
             },
             {
-                "type": "AFFILIATED_WITH",
-                "person": "Emily Johnson",
-                "organization": "C3.ai"
+                "title": "Cloud Security Architect"
             },
             {
-                "type": "AFFILIATED_WITH",
-                "person": "Nancy Brown",
-                "organization": "IBM"
+                "title": "Software Engineer"
             },
             {
-                "type": "AFFILIATED_WITH",
-                "person": "Sarah Lee",
-                "organization": "C3.ai"
+                "title": "Blockchain Developer"
+            }
+        ],
+        "products_services": [
+            {
+                "name": "Symantec Endpoint Security"
             },
             {
-                "type": "HAS_ROLE",
-                "person": "Brian Taylor",
-                "role": "Senior Data Scientist"
+                "name": "IBM Cloud Functions"
             },
             {
-                "type": "HAS_ROLE",
-                "person": "Carol Nguyen",
-                "role": "Junior Data Scientist"
+                "name": "Microsoft Azure"
             },
             {
-                "type": "HAS_ROLE",
-                "person": "Samuel Davis",
-                "role": "Blockchain Developer"
-            },
-            {
-                "type": "HAS_ROLE",
-                "person": "Victor Ramos",
-                "role": "RPA Developer"
-            },
-            {
-                "type": "HAS_ROLE",
-                "person": "James Smith",
-                "role": "Senior AI Consultant"
-            },
-            {
-                "type": "HAS_ROLE",
-                "person": "Emily Johnson",
-                "role": "Project Manager"
-            },
-            {
-                "type": "HAS_ROLE",
-                "person": "Nancy Brown",
-                "role": "Data Analyst"
-            },
-            {
-                "type": "HAS_ROLE",
-                "person": "Sarah Lee",
-                "role": "AI Expert"
-            },
-            {
-                "type": "INVOLVED_WITH",
-                "person": "Brian Taylor",
-                "product_service": "Microsoft Azure"
-            },
-            {
-                "type": "INVOLVED_WITH",
-                "person": "Carol Nguyen",
-                "product_service": "Microsoft Azure"
-            },
-            {
-                "type": "INVOLVED_WITH",
-                "person": "Samuel Davis",
-                "product_service": "Hyperledger Fabric"
-            },
-            {
-                "type": "INVOLVED_WITH",
-                "person": "Samuel Davis",
-                "product_service": "IBM Blockchain Platform"
-            },
-            {
-                "type": "INVOLVED_WITH",
-                "person": "Victor Ramos",
-                "product_service": "IBM Robotic Process Automation"
-            },
-            {
-                "type": "LOCATED_AT",
-                "organization": "IBM",
-                "location": "New York"
-            },
-            {
-                "type": "LOCATED_AT",
-                "organization": "IBM",
-                "location": "San Francisco"
-            },
-            {
-                "type": "LOCATED_AT",
-                "organization": "IBM",
-                "location": "London"
-            },
-            {
-                "type": "LOCATED_AT",
-                "organization": "IBM",
-                "location": "Toronto"
+                "name": "Hyperledger Fabric"
             }
         ]
-    }
+    },
+    "relationships": [
+        {
+            "type": "AFFILIATED_WITH",
+            "person": "Alice Smith",
+            "organization": "IBM"
+        },
+        {
+            "type": "AFFILIATED_WITH",
+            "person": "Michael Turner",
+            "organization": "IBM"
+        },
+        {
+            "type": "AFFILIATED_WITH",
+            "person": "Rachel Singh",
+            "organization": "IBM"
+        },
+        {
+            "type": "AFFILIATED_WITH",
+            "person": "Samuel Davis",
+            "organization": "IBM"
+        },
+        {
+            "type": "HAS_ROLE",
+            "person": "Alice Smith",
+            "role": "Chief Data Officer"
+        },
+        {
+            "type": "HAS_ROLE",
+            "person": "Michael Turner",
+            "role": "Cloud Security Architect"
+        },
+        {
+            "type": "HAS_ROLE",
+            "person": "Rachel Singh",
+            "role": "Software Engineer"
+        },
+        {
+            "type": "HAS_ROLE",
+            "person": "Samuel Davis",
+            "role": "Blockchain Developer"
+        },
+        {
+            "type": "INVOLVED_WITH",
+            "person": "Alice Smith",
+            "product_service": "Symantec Endpoint Security"
+        },
+        {
+            "type": "INVOLVED_WITH",
+            "person": "Rachel Singh",
+            "product_service": "IBM Cloud Functions"
+        },
+        {
+            "type": "INVOLVED_WITH",
+            "person": "Michael Turner",
+            "product_service": "Microsoft Azure"
+        },
+        {
+            "type": "INVOLVED_WITH",
+            "person": "Samuel Davis",
+            "product_service": "Hyperledger Fabric"
+        }
+    ]
 }
+

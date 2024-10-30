@@ -1,189 +1,148 @@
 {
-    "data": {
-        "entities": {
-            "persons": [
-                {
-                    "name": "Benji Martinez"
-                },
-                {
-                    "name": "Emma Lee"
-                },
-                {
-                    "name": "Zachary Brooks"
-                },
-                {
-                    "name": "Victor Ramos"
-                },
-                {
-                    "name": "John Smith"
-                },
-                {
-                    "name": "Jane Doe"
-                }
-            ],
-            "organizations": [
-                {
-                    "name": "IBM"
-                },
-                {
-                    "name": "ServiceTitan"
-                }
-            ],
-            "roles": [
-                {
-                    "title": "IT Operations Manager"
-                },
-                {
-                    "title": "Product Manager"
-                },
-                {
-                    "title": "Solutions Engineer"
-                },
-                {
-                    "title": "RPA Developer"
-                },
-                {
-                    "title": "Integration Specialist"
-                },
-                {
-                    "title": "AI Research Scientist"
-                }
-            ],
-            "locations": [
-                {
-                    "name": "New York"
-                },
-                {
-                    "name": "San Francisco"
-                },
-                {
-                    "name": "Austin"
-                },
-                {
-                    "name": "Boston"
-                }
-            ],
-            "products_services": [
-                {
-                    "name": "IBM Cloud Object Storage"
-                },
-                {
-                    "name": "Google Cloud AI Platform"
-                },
-                {
-                    "name": "IBM Cloud Pak for Integration"
-                },
-                {
-                    "name": "IBM Robotic Process Automation"
-                }
-            ]
-        },
-        "relationships": [
+    "entities": {
+        "persons": [
             {
-                "type": "AFFILIATED_WITH",
-                "person": "Benji Martinez",
-                "organization": "IBM"
+                "name": "Henry Zhou"
             },
             {
-                "type": "HAS_ROLE",
-                "person": "Benji Martinez",
-                "role": "IT Operations Manager"
+                "name": "Alice Smith"
             },
             {
-                "type": "INVOLVED_WITH",
-                "person": "Benji Martinez",
-                "product_service": "IBM Cloud Object Storage"
+                "name": "Lily Garcia"
             },
             {
-                "type": "AFFILIATED_WITH",
-                "person": "Emma Lee",
-                "organization": "IBM"
+                "name": "Natalie Wu"
             },
             {
-                "type": "HAS_ROLE",
-                "person": "Emma Lee",
-                "role": "Product Manager"
+                "name": "Samuel Davis"
+            }
+        ],
+        "organizations": [
+            {
+                "name": "IBM"
             },
             {
-                "type": "INVOLVED_WITH",
-                "person": "Emma Lee",
-                "product_service": "Google Cloud AI Platform"
+                "name": "Symantec"
+            }
+        ],
+        "roles": [
+            {
+                "title": "DevOps Engineer"
             },
             {
-                "type": "AFFILIATED_WITH",
-                "person": "Zachary Brooks",
-                "organization": "IBM"
+                "title": "Chief Data Officer"
             },
             {
-                "type": "HAS_ROLE",
-                "person": "Zachary Brooks",
-                "role": "Solutions Engineer"
+                "title": "Marketing Analyst"
             },
             {
-                "type": "INVOLVED_WITH",
-                "person": "Zachary Brooks",
-                "product_service": "IBM Cloud Pak for Integration"
+                "title": "Product Marketing Manager"
             },
             {
-                "type": "AFFILIATED_WITH",
-                "person": "Victor Ramos",
-                "organization": "IBM"
+                "title": "Blockchain Developer"
+            }
+        ],
+        "products_services": [
+            {
+                "name": "IBM Kubernetes Service"
             },
             {
-                "type": "HAS_ROLE",
-                "person": "Victor Ramos",
-                "role": "RPA Developer"
+                "name": "IBM Cloud Satellite"
             },
             {
-                "type": "INVOLVED_WITH",
-                "person": "Victor Ramos",
-                "product_service": "IBM Robotic Process Automation"
+                "name": "IBM Watson Discovery"
             },
             {
-                "type": "AFFILIATED_WITH",
-                "person": "John Smith",
-                "organization": "ServiceTitan"
+                "name": "Hyperledger Fabric"
             },
             {
-                "type": "HAS_ROLE",
-                "person": "John Smith",
-                "role": "Integration Specialist"
+                "name": "IBM Blockchain Platform"
             },
             {
-                "type": "AFFILIATED_WITH",
-                "person": "Jane Doe",
-                "organization": "IBM"
-            },
-            {
-                "type": "HAS_ROLE",
-                "person": "Jane Doe",
-                "role": "AI Research Scientist"
-            },
-            {
-                "type": "LOCATED_AT",
-                "organization": "IBM",
-                "location": "New York"
-            },
-            {
-                "type": "LOCATED_AT",
-                "organization": "IBM",
-                "location": "San Francisco"
-            },
-            {
-                "type": "LOCATED_AT",
-                "organization": "IBM",
-                "location": "Austin"
-            },
-            {
-                "type": "LOCATED_AT",
-                "organization": "IBM",
-                "location": "Boston"
-            },
-            {
-                "type": "LOCATED_AT",
-                "organization": "ServiceTitan",
-                "location": "Boston"
+                "name": "Symantec Endpoint Security"
             }
         ]
-    }
+    },
+    "relationships": [
+        {
+            "type": "AFFILIATED_WITH",
+            "person": "Henry Zhou",
+            "organization": "IBM"
+        },
+        {
+            "type": "HAS_ROLE",
+            "person": "Henry Zhou",
+            "role": "DevOps Engineer"
+        },
+        {
+            "type": "INVOLVED_WITH",
+            "person": "Henry Zhou",
+            "product_service": "IBM Kubernetes Service"
+        },
+        {
+            "type": "AFFILIATED_WITH",
+            "person": "Alice Smith",
+            "organization": "IBM"
+        },
+        {
+            "type": "HAS_ROLE",
+            "person": "Alice Smith",
+            "role": "Chief Data Officer"
+        },
+        {
+            "type": "INVOLVED_WITH",
+            "person": "Alice Smith",
+            "product_service": "Symantec Endpoint Security"
+        },
+        {
+            "type": "AFFILIATED_WITH",
+            "person": "Lily Garcia",
+            "organization": "IBM"
+        },
+        {
+            "type": "HAS_ROLE",
+            "person": "Lily Garcia",
+            "role": "Marketing Analyst"
+        },
+        {
+            "type": "INVOLVED_WITH",
+            "person": "Lily Garcia",
+            "product_service": "IBM Cloud Satellite"
+        },
+        {
+            "type": "AFFILIATED_WITH",
+            "person": "Natalie Wu",
+            "organization": "IBM"
+        },
+        {
+            "type": "HAS_ROLE",
+            "person": "Natalie Wu",
+            "role": "Product Marketing Manager"
+        },
+        {
+            "type": "INVOLVED_WITH",
+            "person": "Natalie Wu",
+            "product_service": "IBM Watson Discovery"
+        },
+        {
+            "type": "AFFILIATED_WITH",
+            "person": "Samuel Davis",
+            "organization": "IBM"
+        },
+        {
+            "type": "HAS_ROLE",
+            "person": "Samuel Davis",
+            "role": "Blockchain Developer"
+        },
+        {
+            "type": "INVOLVED_WITH",
+            "person": "Samuel Davis",
+            "product_service": "Hyperledger Fabric"
+        },
+        {
+            "type": "INVOLVED_WITH",
+            "person": "Samuel Davis",
+            "product_service": "IBM Blockchain Platform"
+        }
+    ]
 }

@@ -1,134 +1,76 @@
-### Meeting Minutes 1
-**Date and Time:** 05-Sep-2023, 10:00 AM - 10:30 AM
-**Location:**
-- Physical: IBM Office, New York, USA
-- Remote: Microsoft Teams
+### Email Thread
 
-**Attendees:**
-- Brian Taylor - Senior Data Scientist, R&D Department (Note Taker)
-- Carol Nguyen - Junior Data Scientist, R&D Department
-- Victor Ramos - RPA Developer, Automation Department
-- Absentees: Samuel Davis
+#### Email 1
 
-**Agenda:**
-- Project updates on Microsoft Azure data analysis
-- Introduction to new automation project
+**From:** Alice Smith (Chief Data Officer, R&D Department, IBM)  
+**To:** Michael Turner (Cloud Security Architect, Cybersecurity Department, IBM)  
+**CC:** Rachel Singh (Software Engineer, Cloud Solutions Department, IBM); Samuel Davis (Blockchain Developer, Innovation Department, IBM)  
+**Subject:** Integration of Symantec Endpoint Security with IBM Cloud Functions  
 
-**Discussion Points:**
-- Brian provided updates on data analytics for the Microsoft Azure project. Noted completion of preliminary data models.
-- Carol discussed insights drawn from recent data, highlighting a 15% improvement in processing time.
-- Victor introduced a new automation project involving developing bots for internal processes, outlined initial steps and requirements.
+Hi Michael,
 
-**Next Steps:**
-- Brian to finalize data models by 12-Sep-2023.
-- Carol to compile a detailed analysis report by 15-Sep-2023.
-- Victor to draft project proposal for automation by 20-Sep-2023.
+I hope this email finds you well. We are currently working on a project to integrate Symantec Endpoint Security with IBM Cloud Functions. Given your expertise in designing security protocols for Microsoft Azure, I believe your insights could be invaluable in ensuring the security aspects of this integration.
 
-### Meeting Minutes 2
-**Date and Time:** 12-Sep-2023, 2:00 PM - 3:00 PM
-**Location:**
-- Physical: IBM Office, San Francisco, USA
-- Remote: Microsoft Teams
+Rachel will be handling the backend development for IBM Cloud Functions, and Samuel will provide support from the blockchain perspective using Hyperledger Fabric.
 
-**Attendees:**
-- Samuel Davis - Blockchain Developer, Innovation Department (Note Taker)
-- Brian Taylor - Senior Data Scientist, R&D Department
-- Carol Nguyen - Junior Data Scientist, R&D Department
-- External: James Smith - Senior AI Consultant, C3.ai
+Could we schedule a meeting later this week to discuss this further? Your availability and input will be greatly appreciated.
 
-**Agenda:**
-- Collaboration opportunities with C3.ai
-- Status update on IBM Blockchain Platform
+Best regards,  
+Alice Smith
 
-**Discussion Points:**
-- James from C3.ai presented their AI capabilities and potential collaboration areas, emphasizing industrial-scale AI solutions.
-- Samuel highlighted ongoing developments in Hyperledger Fabric for IBM Blockchain Platform.
-- Brian shared insights on how blockchain data could integrate with Microsoft Azure analytics for enhanced security and transparency.
+---
 
-**Next Steps:**
-- Samuel and Brian to set up a follow-up meeting with C3.ai by 19-Sep-2023.
-- Carol to prepare a feasibility report on integrating AI solutions by 25-Sep-2023.
+#### Email 2
 
-### Meeting Minutes 3
-**Date and Time:** 20-Sep-2023, 9:00 AM - 9:45 AM
-**Location:**
-- Physical: IBM Office, London, UK
-- Remote: Microsoft Teams
+**From:** Michael Turner (Cloud Security Architect, Cybersecurity Department, IBM)  
+**To:** Alice Smith (Chief Data Officer, R&D Department, IBM)  
+**CC:** Rachel Singh (Software Engineer, Cloud Solutions Department, IBM); Samuel Davis (Blockchain Developer, Innovation Department, IBM)  
+**Subject:** Re: Integration of Symantec Endpoint Security with IBM Cloud Functions  
 
-**Attendees:**
-- Victor Ramos - RPA Developer, Automation Department (Note Taker)
-- Carol Nguyen - Junior Data Scientist, R&D Department
-- Samuel Davis - Blockchain Developer, Innovation Department
-- External: Emily Johnson - Project Manager, C3.ai
+Hi Alice,
 
-**Agenda:**
-- Progress update on RPA and blockchain integration
-- Potential AI applications in RPA
+Thank you for reaching out. I'm available for a meeting this Thursday at 2 PM EST. I look forward to discussing the security protocols needed for this integration.
 
-**Discussion Points:**
-- Victor reported progress on bot development for internal automation.
-- Samuel discussed potential blockchain integration points with RPA for secure transaction logging.
-- Emily from C3.ai introduced AI tools that could be leveraged for optimizing RPA workflows.
+Rachel, Samuel, I would appreciate it if you could provide any preliminary documentation or technical details ahead of our meeting. This will help me prepare and ensure a productive discussion.
 
-**Next Steps:**
-- Victor to develop a prototype integrating blockchain and RPA by 30-Sep-2023.
-- Samuel to coordinate with Emily on AI tool implementation by 05-Oct-2023.
-- Carol to analyze potential data points for AI applications by 10-Oct-2023.
+Best,  
+Michael Turner
 
-### Meeting Minutes 4
-**Date and Time:** 28-Sep-2023, 11:00 AM - 12:00 PM
-**Location:**
-- Physical: IBM Office, New York, USA
-- Remote: Microsoft Teams
+---
 
-**Attendees:**
-- Brian Taylor - Senior Data Scientist, R&D Department (Note Taker)
-- Victor Ramos - RPA Developer, Automation Department
-- Samuel Davis - Blockchain Developer, Innovation Department
-- Additional Attendee: Nancy Brown - Data Analyst, R&D Department
+#### Email 3
 
-**Agenda:**
-- Review of ongoing projects
-- New R&D initiatives
+**From:** Samuel Davis (Blockchain Developer, Innovation Department, IBM)  
+**To:** Alice Smith (Chief Data Officer, R&D Department, IBM); Michael Turner (Cloud Security Architect, Cybersecurity Department, IBM)  
+**CC:** Rachel Singh (Software Engineer, Cloud Solutions Department, IBM)  
+**Subject:** Re: Integration of Symantec Endpoint Security with IBM Cloud Functions  
 
-**Discussion Points:**
-- Brian shared a detailed review of the Azure data analytics progress, highlighting key performance metrics.
-- Victor provided updates on automation project timelines and challenges faced.
-- Samuel discussed a new initiative for blockchain in supply chain management.
-- Nancy introduced ideas for improving data collection methods for better analytics.
+Hi Alice, Michael,
 
-**Next Steps:**
-- Brian to complete the performance metrics report by 05-Oct-2023.
-- Victor to address automation project challenges and report by 12-Oct-2023.
-- Samuel to draft a proposal for the supply chain blockchain project by 15-Oct-2023.
-- Nancy to prepare a detailed plan on data collection improvements by 18-Oct-2023.
+I have attached the preliminary documentation for Hyperledger Fabric's integration capabilities. Rachel, if you could also share the backend architecture for IBM Cloud Functions, that would be great.
 
-### Meeting Minutes 5
-**Date and Time:** 05-Oct-2023, 3:00 PM - 4:30 PM
-**Location:**
-- Physical: IBM Office, Toronto, Canada
-- Remote: Microsoft Teams
+Looking forward to our meeting on Thursday.
 
-**Attendees:**
-- Brian Taylor - Senior Data Scientist, R&D Department
-- Carol Nguyen - Junior Data Scientist, R&D Department (Note Taker)
-- Samuel Davis - Blockchain Developer, Innovation Department
-- Victor Ramos - RPA Developer, Automation Department
-- External: Sarah Lee - AI Expert, C3.ai
+Best,  
+Samuel Davis
 
-**Agenda:**
-- Finalizing details for Azure data models
-- Blockchain and AI integration strategies
+---
 
-**Discussion Points:**
-- Brian and Carol presented final Azure data models, incorporating feedback from previous sessions.
-- Sarah from C3.ai outlined advanced AI algorithms for data model optimization.
-- Samuel discussed blockchain's role in enhancing data security, with potential AI integration.
-- Victor proposed new RPA features that could leverage the integrated blockchain-AI system.
+#### Email 4
 
-**Next Steps:**
-- Brian and Carol to submit the final Azure data models for review by 10-Oct-2023.
-- Samuel and Sarah to create a joint strategy document for blockchain-AI integration by 20-Oct-2023.
-- Victor to start development on new RPA features by 25-Oct-2023.
+**From:** Rachel Singh (Software Engineer, Cloud Solutions Department, IBM)  
+**To:** Alice Smith (Chief Data Officer, R&D Department, IBM); Michael Turner (Cloud Security Architect, Cybersecurity Department, IBM); Samuel Davis (Blockchain Developer, Innovation Department, IBM)  
+**Subject:** Re: Integration of Symantec Endpoint Security with IBM Cloud Functions  
 
-### JSON Representation of Relationships
+Hi everyone,
+
+Attached is the backend architecture for IBM Cloud Functions. This should provide a comprehensive overview for our meeting.
+
+See you all on Thursday.
+
+Best,  
+Rachel Singh
+
+---
+
+### JSON Object

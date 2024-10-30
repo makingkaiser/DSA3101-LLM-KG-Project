@@ -400,11 +400,11 @@ async def run_queries(prompt, external_organizations, names, n, output_folder):
     await asyncio.gather(*tasks)  # Run all tasks concurrently, respecting the semaphore limit
 
 async def main():
-    prompt = val_minutes_prompt
+    prompt = email_prompt
     external_organizations = ext_organizations
     names = ibm_employees
-    n = 46
-    output_folder = "val_minutes_ground_truth"
+    n = 15
+    output_folder = "email_ground_truth"
     await run_queries(prompt, external_organizations, names, n, output_folder)
 
 if __name__ == "__main__":

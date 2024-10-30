@@ -69,6 +69,6 @@ def evaluate_folders(ground_truth_folder: str, prediction_folder: str) -> Dict:
 # Example usage  
 if __name__ == "__main__":  
     ground_truth_folder = "gt"  
-    prediction_folder = "prediction"  
+    prediction_folder = "gt_prediction"  
     results = evaluate_folders(ground_truth_folder, prediction_folder)  
     print(results)  

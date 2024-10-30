@@ -1,157 +1,140 @@
 {
-    "data": {
-        "entities": {
-            "persons": [
-                {
-                    "name": "Gina Lopez"
-                },
-                {
-                    "name": "Franklin Moore"
-                },
-                {
-                    "name": "Zachary Brooks"
-                },
-                {
-                    "name": "Clara Diaz"
-                }
-            ],
-            "organizations": [
-                {
-                    "name": "IBM"
-                },
-                {
-                    "name": "Splunk"
-                }
-            ],
-            "roles": [
-                {
-                    "title": "UX Designer"
-                },
-                {
-                    "title": "Senior Software Engineer"
-                },
-                {
-                    "title": "Solutions Engineer"
-                },
-                {
-                    "title": "AI Policy Researcher"
-                }
-            ],
-            "locations": [
-                {
-                    "name": "New York"
-                },
-                {
-                    "name": "San Francisco"
-                },
-                {
-                    "name": "Austin"
-                },
-                {
-                    "name": "Chicago"
-                },
-                {
-                    "name": "London"
-                }
-            ],
-            "products_services": [
-                {
-                    "name": "IBM Cloud Pak for Data"
-                },
-                {
-                    "name": "IBM Watson Assistant"
-                },
-                {
-                    "name": "IBM Cloud Pak for Integration"
-                }
-            ]
-        },
-        "relationships": [
+    "entities": {
+        "persons": [
             {
-                "type": "AFFILIATED_WITH",
-                "person": "Gina Lopez",
-                "organization": "IBM"
+                "name": "David Patel"
             },
             {
-                "type": "HAS_ROLE",
-                "person": "Gina Lopez",
-                "role": "UX Designer"
+                "name": "Benji Martinez"
             },
             {
-                "type": "INVOLVED_WITH",
-                "person": "Gina Lopez",
-                "product_service": "IBM Cloud Pak for Data"
+                "name": "Rachel Singh"
             },
             {
-                "type": "LOCATED_AT",
-                "organization": "IBM",
-                "location": "New York"
+                "name": "Emma Lee"
             },
             {
-                "type": "AFFILIATED_WITH",
-                "person": "Franklin Moore",
-                "organization": "IBM"
+                "name": "Zachary Brooks"
+            }
+        ],
+        "organizations": [
+            {
+                "name": "IBM"
             },
             {
-                "type": "HAS_ROLE",
-                "person": "Franklin Moore",
-                "role": "Senior Software Engineer"
+                "name": "Amazon Web Services"
             },
             {
-                "type": "INVOLVED_WITH",
-                "person": "Franklin Moore",
-                "product_service": "IBM Watson Assistant"
+                "name": "Google"
+            }
+        ],
+        "roles": [
+            {
+                "title": "Cloud Architect"
             },
             {
-                "type": "LOCATED_AT",
-                "organization": "IBM",
-                "location": "Chicago"
+                "title": "IT Operations Manager"
             },
             {
-                "type": "AFFILIATED_WITH",
-                "person": "Zachary Brooks",
-                "organization": "IBM"
+                "title": "Software Engineer"
             },
             {
-                "type": "HAS_ROLE",
-                "person": "Zachary Brooks",
-                "role": "Solutions Engineer"
+                "title": "Product Manager"
             },
             {
-                "type": "INVOLVED_WITH",
-                "person": "Zachary Brooks",
-                "product_service": "IBM Cloud Pak for Integration"
+                "title": "Solutions Engineer"
+            }
+        ],
+        "products_services": [
+            {
+                "name": "IBM Cloud Object Storage"
             },
             {
-                "type": "LOCATED_AT",
-                "organization": "IBM",
-                "location": "San Francisco"
+                "name": "IBM Cloud Functions"
             },
             {
-                "type": "AFFILIATED_WITH",
-                "person": "Clara Diaz",
-                "organization": "IBM"
+                "name": "Google Cloud AI Platform"
             },
             {
-                "type": "HAS_ROLE",
-                "person": "Clara Diaz",
-                "role": "AI Policy Researcher"
-            },
-            {
-                "type": "INVOLVED_WITH",
-                "person": "Clara Diaz",
-                "product_service": "IBM AI OpenScale"
-            },
-            {
-                "type": "LOCATED_AT",
-                "organization": "IBM",
-                "location": "London"
-            },
-            {
-                "type": "AFFILIATED_WITH",
-                "organization": "Splunk",
-                "location": "San Francisco"
+                "name": "IBM Cloud Pak for Integration"
             }
         ]
-    }
+    },
+    "relationships": [
+        {
+            "type": "AFFILIATED_WITH",
+            "person": "David Patel",
+            "organization": "IBM"
+        },
+        {
+            "type": "AFFILIATED_WITH",
+            "person": "Benji Martinez",
+            "organization": "IBM"
+        },
+        {
+            "type": "AFFILIATED_WITH",
+            "person": "Rachel Singh",
+            "organization": "IBM"
+        },
+        {
+            "type": "AFFILIATED_WITH",
+            "person": "Emma Lee",
+            "organization": "IBM"
+        },
+        {
+            "type": "AFFILIATED_WITH",
+            "person": "Zachary Brooks",
+            "organization": "IBM"
+        },
+        {
+            "type": "HAS_ROLE",
+            "person": "David Patel",
+            "role": "Cloud Architect"
+        },
+        {
+            "type": "HAS_ROLE",
+            "person": "Benji Martinez",
+            "role": "IT Operations Manager"
+        },
+        {
+            "type": "HAS_ROLE",
+            "person": "Rachel Singh",
+            "role": "Software Engineer"
+        },
+        {
+            "type": "HAS_ROLE",
+            "person": "Emma Lee",
+            "role": "Product Manager"
+        },
+        {
+            "type": "HAS_ROLE",
+            "person": "Zachary Brooks",
+            "role": "Solutions Engineer"
+        },
+        {
+            "type": "INVOLVED_WITH",
+            "person": "David Patel",
+            "product_service": "IBM Cloud Object Storage"
+        },
+        {
+            "type": "INVOLVED_WITH",
+            "person": "Benji Martinez",
+            "product_service": "IBM Cloud Object Storage"
+        },
+        {
+            "type": "INVOLVED_WITH",
+            "person": "Rachel Singh",
+            "product_service": "IBM Cloud Functions"
+        },
+        {
+            "type": "INVOLVED_WITH",
+            "person": "Emma Lee",
+            "product_service": "Google Cloud AI Platform"
+        },
+        {
+            "type": "INVOLVED_WITH",
+            "person": "Zachary Brooks",
+            "product_service": "IBM Cloud Pak for Integration"
+        }
+    ]
 }
