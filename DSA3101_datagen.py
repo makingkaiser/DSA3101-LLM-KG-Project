@@ -3,8 +3,8 @@ import re
 import json
 import os
 import asyncio
-from utils.initialize_client import create_openai_completion
-
+import huggingface_hub
+from huggingface_hub import InferenceClient
 
 val_minutes_prompt = """
 "i need help to creating meeting minutes.  Using the list of 5 employees in the same organisation provided below, generate 5 coherent and realistic meeting minutes of varying complexity - simple, moderate, detailed. Write them in bullet point forms, with the date formatted as DD-MMM-YYYY. The employees’ responsibilities should align with their role and seniority, and the duration of meetings should align with the complexity of the meetings. The minutes should include:
@@ -314,8 +314,22 @@ purpose_list = ["formal updates on project status", "informal requests", "collab
                 "follow-ups", "feedback requests", "meeting scheduling"]
 
 
-import re
-import json
+
+client = InferenceClient(api_key="")
+
+def create_openai_completion(prompt):
+    completion = client.chat.completions.create(
+        model="gpt-4o",
+        messages=[
+            {"role": "user", "content": prompt}
+        ],
+        temperature=0.8,
+        max_tokens=4096,
+        top_p=0.7,
+        stream=False
+    )
+    return completion.choices[0].message.content
+    
 
 def extract_json_from_response(response_text):
     """

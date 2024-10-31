@@ -20,43 +20,52 @@ class NERRelationshipEvaluator:
         # Handle case where prediction is nested under 'data'
         if 'data' in prediction:
             prediction = prediction['data']
+        if 'data' in ground_truth:
+            ground_truth = ground_truth['data']
+        
             
         self.ground_truth = self._normalize_json(ground_truth)
         self.prediction = self._normalize_json(prediction)
     
     def _normalize_json(self, data: Dict) -> Dict:
-        """Normalize JSON by sorting all lists and standardizing formats"""
+        """Normalize JSON by sorting all lists and standardizing formats, handling null values"""
         normalized = data.copy()
         
-        # Sort entities
-        for entity_type in ['persons', 'organizations', 'roles', 'products_services']:
-            if entity_type in normalized.get('entities', {}):
-                normalized['entities'][entity_type] = sorted(
-                    normalized['entities'][entity_type],
-                    key=lambda x: x.get('name', x.get('title', '')).lower()
-                )
+        # Handle entities section
+        if 'entities' in normalized:
+            for entity_type in ['persons', 'organizations', 'roles', 'products_services']:
+                if entity_type in normalized.get('entities', {}):
+                    # Filter out any null entries and handle null fields
+                    normalized['entities'][entity_type] = sorted(
+                        [entry for entry in normalized['entities'][entity_type] if entry is not None],
+                        key=lambda x: (x.get('name', x.get('title', '')).lower() if x.get('name') or x.get('title') else '')
+                    )
         
-        # Sort relationships
+        # Handle relationships section
         if 'relationships' in normalized:
+            # Filter out any null relationships
+            relationships = [rel for rel in normalized['relationships'] if rel is not None]
             normalized['relationships'] = sorted(
-                normalized['relationships'],
+                relationships,
                 key=lambda x: (
-                    x.get('type', '').lower(),
-                    x.get('person', '').lower(),
-                    self._normalize_organization_name(x.get('organization', '')).lower(),
-                    x.get('role', '').lower(),
-                    x.get('product_service', '').lower(),
-                    x.get('location', '').lower()
+                    x.get('type', '').lower() if x.get('type') else '',
+                    x.get('person', '').lower() if x.get('person') else '',
+                    self._normalize_organization_name(x.get('organization', '')).lower() if x.get('organization') else '',
+                    x.get('role', '').lower() if x.get('role') else '',
+                    x.get('product_service', '').lower() if x.get('product_service') else '',
+                    x.get('location', '').lower() if x.get('location') else ''
                 )
             )
         
         return normalized
-    
+
     def _normalize_organization_name(self, org_name: str) -> str:
-        """Strip department information from organization names"""
+        """Strip department information from organization names, handling null values"""
         if not org_name:
             return ""
-        return org_name.split(',')[0].strip()
+        if isinstance(org_name, str):
+            return org_name.split(',')[0].strip()
+        return ""
     
     def evaluate_entities(self, entity_type: str) -> EvaluationMetrics:
         """Evaluate specific entity type with order independence"""
@@ -126,19 +135,20 @@ class NERRelationshipEvaluator:
         """Convert relationships to comparable tuples, normalizing and sorting components"""
         normalized = set()
         for rel in relationships:
-            # Extract base role without department info
-            role = rel.get("role", "").split(",")[0].strip().lower()
-            # Normalize organization name
-            organization = self._normalize_organization_name(rel.get("organization", "")).lower()
+            # Extract base role without department info, handle null values
+            role = rel.get("role", "").split(",")[0].strip().lower() if rel.get("role") else ""
+            # Normalize organization name, handle null values
+            organization = self._normalize_organization_name(rel.get("organization", "")).lower() if rel.get("organization") else ""
             
             # Create tuple of components, sorted within each relationship
+            # Handle potential null values for all fields
             components = [
-                rel["type"].lower(),
+                rel.get("type", "").lower(),
                 rel.get("person", "").lower(),
                 organization,
                 role,
                 rel.get("product_service", "").lower(),
-                rel.get("location", "").lower()
+                rel.get("location", "").lower() if rel.get("location") else ""
             ]
             normalized.add(tuple(components))
         return normalized
@@ -195,8 +205,8 @@ def evaluate_model_output(ground_truth_json: Dict, prediction_json: Dict) -> Dic
     
     return report
 
-ground_truth_filepath = "response_4.json"
-prediction_filepath = "response_4_evaluated.json"
+ground_truth_filepath = "response_100.json"
+prediction_filepath = "response_100_evaluated.json"
 
 
 def load_json(filepath):
@@ -208,4 +218,3 @@ ground_truth = load_json(ground_truth_filepath)
 prediction = load_json(prediction_filepath)
 
 report = evaluate_model_output(ground_truth, prediction)
-print(report)

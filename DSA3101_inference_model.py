@@ -4,6 +4,7 @@ import re
 from openai import OpenAI
 import huggingface_hub
 from huggingface_hub import InferenceClient
+client = InferenceClient(api_key="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")
 
 
 # Point to the local server
@@ -200,7 +201,7 @@ def eval_text_files(input_folder, output_folder):
         print(f"Evaluated '{txt_file}' and saved to '{evaluated_filename}'.")
 
 
-eval_text_files("email_ground_truth", "email_ground_truth_prediction")
+eval_text_files("minutes_ground_truth", "minutes_ground_truth_prediction")
 
 # string = """{\n  \"entities\": {\n    \"persons\": [\n      {\n        \"name\": \"Tina Foster\"\n      },\n      {\n        \"name\": \"Quinn Parker\"\n      },\n      {\n        \"name\": \"Carol Nguyen\"\n      },\n      {\n        \"name\": \"Derek Hill\"\n      },\n      {\n        \"name\": \"Natalie Wu\"\n      }\n    ],\n    \"organizations\": [\n      {\n        \"name\": \"IBM\"\n      }\n    ],\n    \"roles\": [\n      {\n        \"title\": \"IT Support Specialist\"\n      },\n      {\n        \"title\": \"Data Analyst\"\n      },\n      {\n        \"title\": \"Junior Data Scientist\"\n      },\n      {\n        \"title\": \"QA Engineer\"\n      },\n      {\n        \"title\": \"Product Marketing Manager\"\n      }\n    ],\n    \"locations\": [\n      \n    ],\n    \"products_services\": [\n      {\n        \"name\": \"QRadar SIEM\"\n      },\n      {\n        \"name\": \"IBM Cognos Analytics\"\n      },\n      {\n        \"name\": \"Microsoft Azure\"\n      },\n      {\n        \"name\": \"Splunk\"\n      }\n    ]\n  },\n  \"relationships\": [\n    {\n      \"type\": \"AFFILIATED_WITH\",\n      \"person\": \"Tina Foster\",\n      \"organization\": \"IBM\"\n    },\n    {\n      \"type\": \"HAS_ROLE\",\n      \"person\": \"Tina Foster\",\n      \"role\": \"IT Support Specialist\"\n    },\n    {\n      \"type\": \"INVOLVED_WITH\",\n      \"person\": \"Quinn Parker\",\n      \"product_service\": \"QRadar SIEM\"\n    },\n    {\n      \"type\": \"LOCATED_AT\",\n      \"organization\": \"IBM\",\n      \"location\": \"\"\n    },\n    {\n      \"type\": \"HAS_ROLE\",\n      \"person\": \"Quinn Parker\",\n      \"role\": \"Data Analyst\"\n    },\n    {\n      \"type\": \"AFFILIATED_WITH\",\n      \"person\": \"Carol Nguyen\",\n      \"organization\": \"IBM\"\n    },\n    {\n      \"type\": \"HAS_ROLE\",\n      \"person\": \"Carol Nguyen\",\n      \"role\": \"Junior Data Scientist\"\n    },\n    {\n      \"type\": \"INVOLVED_WITH\",\n      \"person\": \"Carol Nguyen\",\n      \"product_service\": \"Microsoft Azure\"\n    },\n    {\n      \"type\": \"AFFILIATED_WITH\",\n      \"person\": \"Derek Hill\",\n      \"organization\": \"IBM\"\n    },\n    {\n      \"type\": \"HAS_ROLE\",\n      \"person\": \"Derek Hill\",\n      \"role\": \"QA Engineer\"\n    },\n    {\n      \"type\": \"INVOLVED_WITH\",\n      \"person\": \"Natalie Wu\",\n      \"product_service\": \"Splunk\"\n    }\n  ]\n}"""
 # print(extract_json_from_response(string))
