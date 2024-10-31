@@ -4,12 +4,10 @@ import re
 from openai import OpenAI
 import huggingface_hub
 from huggingface_hub import InferenceClient
-client = InferenceClient(api_key="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")
+client = InferenceClient(api_key="")
 
 
 # Point to the local server
-#client = OpenAI(base_url="http://localhost:1234/v1", api_key="lm-studio")
-
 
 eval_prompt = """Your task is to extract entities, as well as define any relationships between them, outputting only a single JSON object for which the format MUST be adhered to, with no other text. The entity types to extract are:
 
