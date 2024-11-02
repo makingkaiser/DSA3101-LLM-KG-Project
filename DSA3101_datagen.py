@@ -318,6 +318,9 @@ purpose_list = ["formal updates on project status", "informal requests", "collab
 client = InferenceClient(api_key="")
 
 def create_openai_completion(prompt):
+    """
+    Shortcut function to create a completion using the GPT-4o model
+    """
     completion = client.chat.completions.create(
         model="gpt-4o",
         messages=[
