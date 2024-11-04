@@ -199,7 +199,63 @@ def eval_text_files(input_folder, output_folder):
         print(f"Evaluated '{txt_file}' and saved to '{evaluated_filename}'.")
 
 
-eval_text_files("minutes_ground_truth", "minutes_ground_truth_prediction")
+#eval_text_files("minutes_ground_truth", "minutes_ground_truth_prediction")
+
+def eval_json_input(input_json):
+    """
+    Evaluates the content from a JSON input and writes the results to a JSON file.
+    
+    Args:
+        input_json (dict): A dictionary with structure {'data': 'text content'}
+    
+    Returns:
+        str: Path to the output file
+    """
+    # Extract the text content from the input JSON
+    if not isinstance(input_json, dict) or 'data' not in input_json:
+        raise ValueError("Input JSON must be a dictionary with a 'data' key")
+    
+    text_content = input_json["data"]
+    
+    # Generate the populated prompt
+    populated_prompt = eval_prompt.format(text=text_content)
+    
+    print("Evaluating JSON input...")
+    # Make the API call
+    client = InferenceClient(api_key="")
+    completion = client.chat.completions.create(
+        model="meta-llama/Llama-3.1-8B-Instruct",
+        messages=[
+            {"role": "user", "content": populated_prompt}
+        ],
+        temperature=0.8,
+        max_tokens=4096,
+        top_p=0.7,
+        stream=False
+    )
+    response_text = completion.choices[0].message.content
+    print(response_text)
+    
+    # Extract JSON from the response
+    extracted_json = extract_json_from_response(response_text)
+    
+    # Generate output filename using timestamp to ensure uniqueness
+    from datetime import datetime
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    output_filename = f"evaluated_{timestamp}.json"
+    
+    # Write the evaluated content to the output file
+    with open(output_filename, 'w') as output_file:
+        json.dump(extracted_json, output_file, indent=4)
+    
+    print(f"Evaluated content and saved to '{output_filename}'")
+    return output_filename
+
+with open("1.json", 'r') as file:
+    json_obj = json.load(file)
+
+eval_json_input(json_obj)
+
 
 # string = """{\n  \"entities\": {\n    \"persons\": [\n      {\n        \"name\": \"Tina Foster\"\n      },\n      {\n        \"name\": \"Quinn Parker\"\n      },\n      {\n        \"name\": \"Carol Nguyen\"\n      },\n      {\n        \"name\": \"Derek Hill\"\n      },\n      {\n        \"name\": \"Natalie Wu\"\n      }\n    ],\n    \"organizations\": [\n      {\n        \"name\": \"IBM\"\n      }\n    ],\n    \"roles\": [\n      {\n        \"title\": \"IT Support Specialist\"\n      },\n      {\n        \"title\": \"Data Analyst\"\n      },\n      {\n        \"title\": \"Junior Data Scientist\"\n      },\n      {\n        \"title\": \"QA Engineer\"\n      },\n      {\n        \"title\": \"Product Marketing Manager\"\n      }\n    ],\n    \"locations\": [\n      \n    ],\n    \"products_services\": [\n      {\n        \"name\": \"QRadar SIEM\"\n      },\n      {\n        \"name\": \"IBM Cognos Analytics\"\n      },\n      {\n        \"name\": \"Microsoft Azure\"\n      },\n      {\n        \"name\": \"Splunk\"\n      }\n    ]\n  },\n  \"relationships\": [\n    {\n      \"type\": \"AFFILIATED_WITH\",\n      \"person\": \"Tina Foster\",\n      \"organization\": \"IBM\"\n    },\n    {\n      \"type\": \"HAS_ROLE\",\n      \"person\": \"Tina Foster\",\n      \"role\": \"IT Support Specialist\"\n    },\n    {\n      \"type\": \"INVOLVED_WITH\",\n      \"person\": \"Quinn Parker\",\n      \"product_service\": \"QRadar SIEM\"\n    },\n    {\n      \"type\": \"LOCATED_AT\",\n      \"organization\": \"IBM\",\n      \"location\": \"\"\n    },\n    {\n      \"type\": \"HAS_ROLE\",\n      \"person\": \"Quinn Parker\",\n      \"role\": \"Data Analyst\"\n    },\n    {\n      \"type\": \"AFFILIATED_WITH\",\n      \"person\": \"Carol Nguyen\",\n      \"organization\": \"IBM\"\n    },\n    {\n      \"type\": \"HAS_ROLE\",\n      \"person\": \"Carol Nguyen\",\n      \"role\": \"Junior Data Scientist\"\n    },\n    {\n      \"type\": \"INVOLVED_WITH\",\n      \"person\": \"Carol Nguyen\",\n      \"product_service\": \"Microsoft Azure\"\n    },\n    {\n      \"type\": \"AFFILIATED_WITH\",\n      \"person\": \"Derek Hill\",\n      \"organization\": \"IBM\"\n    },\n    {\n      \"type\": \"HAS_ROLE\",\n      \"person\": \"Derek Hill\",\n      \"role\": \"QA Engineer\"\n    },\n    {\n      \"type\": \"INVOLVED_WITH\",\n      \"person\": \"Natalie Wu\",\n      \"product_service\": \"Splunk\"\n    }\n  ]\n}"""
 # print(extract_json_from_response(string))
